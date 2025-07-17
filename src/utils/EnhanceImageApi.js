@@ -49,7 +49,7 @@ const PollForEnhancedImage = async (taskId, retries = 0) => {
             throw new Error("Max retries reached. Please try again later.");
         }
 
-        // wait for 2 second
+        // waiting for 2 seconds here 
         await new Promise((resolve) => setTimeout(resolve, 2000));
 
         return PollForEnhancedImage(taskId, retries + 1);
